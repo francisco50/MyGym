@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyGym</string>
+    <string name="detail_button">Show Details</string>
+    <string name="create_workout">Create Workout</string>
+    <string name="workout_title">Create Workout</string>
+    <string name="action_share">Action Share</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="workout_Fragment_title">Title</string>
+    <string name="Workout_description">Workout Description</string>
+</resources>
