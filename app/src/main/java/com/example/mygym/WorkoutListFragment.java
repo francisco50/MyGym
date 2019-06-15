@@ -22,7 +22,7 @@ public class WorkoutListFragment extends ListFragment
 //define the interface listener to respond to item clicked.
     //we want any activity that will implement the listener interface to respond to clicks
     //This method contains only one Id of the item that was clicked
-interface Listener
+   interface Listener
     {
         void itemClicked(long id);
     }

@@ -2,6 +2,7 @@ package com.example.mygym;
 
 import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ShareActionProvider;
@@ -11,7 +12,8 @@ import android.view.View;
 import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity
-        implements  WorkoutListFragment.Listener {
+        implements  WorkoutListFragment.Listener
+{
 
     private ShareActionProvider shareActionProvider;
     @Override
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
     }
 
 
@@ -71,9 +74,17 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void itemClicked(long id)
     {
-        Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra(DetailActivity.EXTRA_WORKOUT_ID, (int)id);
-        startActivity(intent);
+        View fragmentContainer = findViewById(R.id.fragment_container);
+        if(fragmentContainer != null)
+        {
+//ADD CODE HERE
+        }
+        else
+            {
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_WORKOUT_ID, (int) id);
+            startActivity(intent);
+        }
 
     }
 }

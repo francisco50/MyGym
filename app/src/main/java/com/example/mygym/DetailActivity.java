@@ -1,6 +1,7 @@
 package com.example.mygym;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -18,6 +19,8 @@ public static final String EXTRA_WORKOUT_ID = "id";
         setContentView(R.layout.activity_detail);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         //This is a reference to the fragment class, because the fragment is not a view
         // so it must be referenced and called in here, with a method
