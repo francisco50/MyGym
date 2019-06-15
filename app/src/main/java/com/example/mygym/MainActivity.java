@@ -1,6 +1,7 @@
 package com.example.mygym;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -74,10 +75,22 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void itemClicked(long id)
     {
+        //get reference to the frame layout that will contain workoutDetailFragment,
+        // this will run only on devices with large screens
         View fragmentContainer = findViewById(R.id.fragment_container);
         if(fragmentContainer != null)
         {
-//ADD CODE HERE
+            Fragment_workout_detail details = new Fragment_workout_detail();
+            //starts the fragment transaction
+            FragmentTransaction fragT = getSupportFragmentManager().beginTransaction();
+            details.setWorkoutId(id);
+           //each time the user clicks on a workout, we'll replace the fragment with a new instance of it
+           fragT.replace(R.id.fragment_container, details);
+           //Set Fragment to fade in and Out
+           fragT.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+           fragT.addToBackStack(null);
+           fragT.commit();
+
         }
         else
             {
