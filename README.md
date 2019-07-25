@@ -1,6 +1,6 @@
 
 ###  ( MyGym)
-CORRETE is an App for running.
+MyGym is an App for working out both at home and at the gym.
 
 ### Purpose of App
 The purpose of this App is to help people workout more efficienly, and without alot of complicated workouts. As a semi - pro Athlete myself i believe working out should be simple with the right methods.
